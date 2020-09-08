@@ -13,6 +13,10 @@ public class Word {
         mid = id;
     }
 
+    public Word (String miwokWord, String defaultWord){
+        mMiwokWord = miwokWord;
+        mDefaultWord = defaultWord;
+    }
 
     public String getMiwokWord(){
         return mMiwokWord;
