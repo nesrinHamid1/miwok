@@ -14,6 +14,16 @@ public class Numbers extends AppCompatActivity {
         setContentView(R.layout.word_list_layout);
 
         ArrayList<Word> words = new ArrayList<>();
+
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one"));
         words.add(new Word("lutti", "one"));
 
 

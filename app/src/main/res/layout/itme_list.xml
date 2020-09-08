@@ -3,17 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tool="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_marginLeft="16dp"
     android:layout_marginTop="16dp">
-    <TextView
-        android:id="@+id/item"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tool:text="Item"/>
-    <TextView
-        android:id="@+id/sub_item"
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Sub Item"/>
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="16dp"/>
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tool:text="Item"/>
+        <TextView
+            android:id="@+id/sub_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tool:text="Sub Item"/>
+    </LinearLayout>
+
 </LinearLayout>
