@@ -28,10 +28,10 @@ public class phrases extends AppCompatActivity {
         words.add(new Word("yoowutis", "Let’s go."));
         words.add(new Word("әnni'nem", "Come here."));
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words,category_phrases);
 
         ListView listView = (ListView) findViewById(R.id.list);
-        listView.setBackgroundColor(getResources().getColor(category_phrases));
+
         listView.setAdapter(adapter);
     }
 }

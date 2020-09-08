@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +14,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
     // created a consteror for the word adapter class
     //were i passed the context of the applecation
     // and the arraylist and the type for that list is a custom class called word
-
-    public WordAdapter (Activity context, ArrayList<Word> wordList){
+    private int mColor;
+    public WordAdapter (Activity context, ArrayList<Word> wordList, int color){
         // i passed a zero in resource because this is a custom adapter for two TextViews the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0
         super(context,0,wordList);
+        mColor = color;
     }
 
     @Override
@@ -51,6 +53,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
         itemImage.setImageResource(w.getId());
         // Return the whole list item layout (containing 2 TextViews)
         // so that it can be shown in the ListView
+        View listView = listItemView.findViewById(R.id.textContnor);
+        int color = ContextCompat.getColor(getContext(),mColor);
+        listView.setBackgroundColor(color);
         return listItemView;
     }
 

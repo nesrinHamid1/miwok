@@ -26,10 +26,9 @@ public class colors extends AppCompatActivity {
         words.add(new Word("chiwiiṭә", "mustard yellow", R.drawable.color_mustard_yellow));
 
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words,category_colors);
 
         ListView listView = (ListView) findViewById(R.id.list);
-        listView.setBackgroundColor(getResources().getColor(category_colors));
         listView.setAdapter(adapter);
     }
 }

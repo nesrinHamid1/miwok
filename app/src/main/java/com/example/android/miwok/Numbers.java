@@ -6,6 +6,9 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import static com.example.android.miwok.R.color.category_family;
+import static com.example.android.miwok.R.color.category_numbers;
+
 public class Numbers extends AppCompatActivity {
 
     @Override
@@ -27,7 +30,7 @@ public class Numbers extends AppCompatActivity {
         words.add(new Word("lutti", "one", R.drawable.number_ten));
 
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words,category_numbers);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
