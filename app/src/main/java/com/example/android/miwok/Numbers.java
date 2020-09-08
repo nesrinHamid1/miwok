@@ -15,16 +15,16 @@ public class Numbers extends AppCompatActivity {
 
         ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
-        words.add(new Word("lutti", "one"));
+        words.add(new Word("lutti", "one", R.drawable.number_one));
+        words.add(new Word("lutti", "one", R.drawable.number_two));
+        words.add(new Word("lutti", "one", R.drawable.number_three));
+        words.add(new Word("lutti", "one", R.drawable.number_four));
+        words.add(new Word("lutti", "one", R.drawable.number_five));
+        words.add(new Word("lutti", "one", R.drawable.number_six));
+        words.add(new Word("lutti", "one",R.drawable.number_seven));
+        words.add(new Word("lutti", "one", R.drawable.number_eight));
+        words.add(new Word("lutti", "one", R.drawable.number_nine));
+        words.add(new Word("lutti", "one", R.drawable.number_ten));
 
 
         WordAdapter adapter = new WordAdapter(this, words);
