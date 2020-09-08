@@ -6,6 +6,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import static com.example.android.miwok.R.color.category_colors;
+
 public class colors extends AppCompatActivity {
 
     @Override
@@ -27,7 +29,7 @@ public class colors extends AppCompatActivity {
         WordAdapter adapter = new WordAdapter(this, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
-
+        listView.setBackgroundColor(getResources().getColor(category_colors));
         listView.setAdapter(adapter);
     }
 }

@@ -6,13 +6,15 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import static com.example.android.miwok.R.color.category_colors;
+import static com.example.android.miwok.R.color.category_family;
+
 public class Family_members extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list_layout);
-
 
         ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("әpә", "father", R.drawable.family_father));
@@ -29,7 +31,7 @@ public class Family_members extends AppCompatActivity {
         WordAdapter adapter = new WordAdapter(this, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
-
+        listView.setBackgroundColor(getResources().getColor(category_family));
         listView.setAdapter(adapter);
     }
 }
