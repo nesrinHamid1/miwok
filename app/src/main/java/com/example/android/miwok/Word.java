@@ -5,10 +5,12 @@ package com.example.android.miwok;
 public class Word {
     private String mMiwokWord;
     private String mDefaultWord;
+    private int mid;
 
-    public Word (String miwokWord, String defaultWord){
+    public Word (String miwokWord, String defaultWord, int id){
         mMiwokWord = miwokWord;
         mDefaultWord = defaultWord;
+        mid = id;
     }
 
 
@@ -18,5 +20,9 @@ public class Word {
 
     public String getDefaultWord(){
         return mDefaultWord;
+    }
+
+    public int getId(){
+        return mid;
     }
 }
