@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     //were i passed the context of the applecation
     // and the arraylist and the type for that list is a custom class called word
     private int mColor;
+
     public WordAdapter (Activity context, ArrayList<Word> wordList, int color){
         // i passed a zero in resource because this is a custom adapter for two TextViews the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0
@@ -35,7 +37,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         //created a word opject to assign the words to the right view
-        Word w = getItem(position);
+        final Word w = getItem(position);
 
         //created A textview to pass the miwok Word to the top view called item view in item list layout
         TextView miwokWordView = (TextView) listItemView.findViewById(R.id.item);
@@ -56,6 +58,17 @@ public class WordAdapter extends ArrayAdapter<Word> {
         View listView = listItemView.findViewById(R.id.textContnor);
         int color = ContextCompat.getColor(getContext(),mColor);
         listView.setBackgroundColor(color);
+
+        final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(),w.getAudio());
+        listItemView.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(),w.getAudio());
+                mediaPlayer.start();
+            }
+        });
+
         return listItemView;
     }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/textContnor"
     android:layout_height="wrap_content"
     xmlns:tool="http://schemas.android.com/tools"
     android:orientation="horizontal">
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher" />
     <LinearLayout
-        android:id="@+id/textContnor"
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -36,6 +37,13 @@
             tool:text="Sub Item"
             android:textSize="18sp"
             android:textColor="#ffffff"/>
+
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:src="@drawable/polygon" />
 </LinearLayout>
