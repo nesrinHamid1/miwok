@@ -9,7 +9,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import static com.example.android.miwok.R.color.category_colors;
 import static com.example.android.miwok.R.color.category_family;
 
 public class Family_members extends AppCompatActivity {
@@ -66,6 +65,11 @@ public class Family_members extends AppCompatActivity {
                 mMediaPlayer.setOnCompletionListener(mCompletionListener);
             }
         });
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
     }
     /**
      * Clean up the media player by releasing its resources.

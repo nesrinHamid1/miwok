@@ -16,7 +16,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
     //were i passed the context of the applecation
     // and the arraylist and the type for that list is a custom class called word
     private int mColor;
-
     public WordAdapter (Activity context, ArrayList<Word> wordList, int color){
         // i passed a zero in resource because this is a custom adapter for two TextViews the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0
@@ -60,14 +59,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         listView.setBackgroundColor(color);
 
         final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(),w.getAudio());
-        listItemView.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View view) {
-                final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(),w.getAudio());
-                mediaPlayer.start();
-            }
-        });
 
         return listItemView;
     }
